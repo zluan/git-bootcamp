@@ -491,6 +491,8 @@ static void usage(char *cmd) {
 
 #define BUFSIZE 256
 
+//this is a test on Sept 4, 2019
+
 int main(int argc, char *argv[]) {
     /* To hold input file name */
     char buf[BUFSIZE];
@@ -499,6 +501,8 @@ int main(int argc, char *argv[]) {
     char *logfile_name = NULL;
     int level = 4;
     int c;
+
+    int testTemp = 0;
 
     while ((c = getopt(argc, argv, "hv:f:l:")) != -1) {
         switch(c) {
@@ -537,6 +541,8 @@ int main(int argc, char *argv[]) {
     bool ok = true;
     ok = ok && run_console(infile_name);
     ok = ok && finish_cmd();
+    
+
     return ok ? 0 : 1;
 }
 
